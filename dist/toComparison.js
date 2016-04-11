@@ -90,8 +90,14 @@ toComparison = {
         selfObj.showDebugLog('Start showComparisonPanel');
         var data = selfObj.getDataForCookie();
 
+        // Если для сравнения мало элеменотов
         if(data.length < 2) {
             selfObj.showDebugLog('Количество объектов недостаточное для сравнения');
+
+            // Удалить панель
+            $("#"+selfObj.settings.comparisonPanelId+" .comparisonPanelClose").on('click', function(event){
+                $("#"+selfObj.settings.comparisonPanelId).remove();
+            });
             return true;
         }
 
