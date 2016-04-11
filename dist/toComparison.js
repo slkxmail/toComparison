@@ -95,9 +95,7 @@ toComparison = {
             selfObj.showDebugLog('Количество объектов недостаточное для сравнения');
 
             // Удалить панель
-            $("#"+selfObj.settings.comparisonPanelId+" .comparisonPanelClose").on('click', function(event){
-                $("#"+selfObj.settings.comparisonPanelId).remove();
-            });
+            $("#"+selfObj.settings.comparisonPanelId).remove();
             return true;
         }
 
@@ -221,7 +219,6 @@ toComparison = {
         // Обновить нажатую кнопку
         selfObj.markButtonAsCompare(pathId);
 
-        selfObj.showComparisonPanel();
         return false;
     }
 };
