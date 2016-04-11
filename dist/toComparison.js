@@ -221,7 +221,7 @@ toComparison = {
         // Обновить нажатую кнопку
         selfObj.markButtonAsCompare(pathId);
 
-        selfObj.showComparisonPanel(pathId);
+        selfObj.showComparisonPanel();
         return false;
     }
 };
